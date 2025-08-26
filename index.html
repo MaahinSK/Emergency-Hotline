@@ -13,10 +13,155 @@
     <header class="header">
         <div class="container header-container">
             <div class="logo-container">
+                <!-- Replace with your logo image -->
                 <img src="logo.png" alt="Government Logo" class="logo">
                 <div>
                     <h1 class="site-title">Emergency Service Directory</h1>
                     <p class="site-subtitle">Government Emergency Services at Your Fingertip</p>
                     <p class="site-subtitle">A Project by Government of the People's Republic of Bangladesh</p>
                 </div>
-            </div> 
+            </div>
+            <div class="counters">
+                <div class="counter favorite-counter">
+                    <i class="fas fa-heart"></i>
+                    <span id="favorite-count">0</span>
+                </div>
+                <div class="counter coin-counter">
+                    <i class="fas fa-coins"></i>
+                    <span id="coin-count">100</span>
+                </div>
+                <div class="counter copy-counter">
+                    <i class="fas fa-copy"></i>
+                    <span id="copy-count">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main container">
+        <!-- Emergency Services Grid -->
+        <div class="cards-grid">
+            <!-- National Emergency -->
+            <div class="emergency-card national-emergency">
+                <h2 class="card-title">National Emergency Number</h2>
+                <p class="card-subtitle">All</p>
+                <div class="card-number">999</div>
+                <div class="card-actions">
+                    <button class="btn-copy" data-number="999">
+                        <i class="far fa-copy"></i> Copy
+                    </button>
+                    <button class="btn-call" data-number="999" data-service="National Emergency Number">
+                        <i class="fas fa-phone-alt"></i> Call
+                    </button>
+                    <button class="btn-favorite" data-number="999">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Police Helpline -->
+            <div class="emergency-card police">
+                <h2 class="card-title">Police Helpline Number</h2>
+                <p class="card-subtitle">Police</p>
+                <div class="card-number">999</div>
+                <div class="card-actions">
+                    <button class="btn-copy" data-number="999">
+                        <i class="far fa-copy"></i> Copy
+                    </button>
+                    <button class="btn-call" data-number="999" data-service="Police Helpline Number">
+                        <i class="fas fa-phone-alt"></i> Call
+                    </button>
+                    <button class="btn-favorite" data-number="999">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Fire Service -->
+            <div class="emergency-card fire-service">
+                <h2 class="card-title">Fire Service Number</h2>
+                <p class="card-subtitle">Fire</p>
+                <div class="card-number">999</div>
+                <div class="card-actions">
+                    <button class="btn-copy" data-number="999">
+                        <i class="far fa-copy"></i> Copy
+                    </button>
+                    <button class="btn-call" data-number="999" data-service="Fire Service Number">
+                        <i class="fas fa-phone-alt"></i> Call
+                    </button>
+                    <button class="btn-favorite" data-number="999">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Ambulance Service -->
+            <div class="emergency-card ambulance">
+                <h2 class="card-title">Ambulance Service</h2>
+                <p class="card-subtitle">Health</p>
+                <div class="card-number">1994-999999</div>
+                <div class="card-actions">
+                    <button class="btn-copy" data-number="1994-999999">
+                        <i class="far fa-copy"></i> Copy
+                    </button>
+                    <button class="btn-call" data-number="1994-999999" data-service="Ambulance Service">
+                        <i class="fas fa-phone-alt"></i> Call
+                    </button>
+                    <button class="btn-favorite" data-number="1994-999999">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Women & Child Helpline -->
+            <div class="emergency-card women-child">
+                <h2 class="card-title">Women & Child Helpline</h2>
+                <p class="card-subtitle">Help</p>
+                <div class="card-number">109</div>
+                <div class="card-actions">
+                    <button class="btn-copy" data-number="109">
+                        <i class="far fa-copy"></i> Copy
+                    </button>
+                    <button class="btn-call" data-number="109" data-service="Women & Child Helpline">
+                        <i class="fas fa-phone-alt"></i> Call
+                    </button>
+                    <button class="btn-favorite" data-number="109">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Electricity Helpline -->
+            <div class="emergency-card electricity">
+                <h2 class="card-title">Electricity Helpline</h2>
+                <p class="card-subtitle">Electricity</p>
+                <div class="card-number">16216</div>
+                <div class="card-actions">
+                    <button class="btn-copy" data-number="16216">
+                        <i class="far fa-copy"></i> Copy
+                    </button>
+                    <button class="btn-call" data-number="16216" data-service="Electricity Helpline">
+                        <i class="fas fa-phone-alt"></i> Call
+                    </button>
+                    <button class="btn-favorite" data-number="16216">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call History Section -->
+        <section class="call-history">
+            <div class="history-header">
+                <h2 class="history-title">Call History</h2>
+                <button id="clear-history" class="clear-btn">
+                    <i class="fas fa-trash-alt"></i> Clear History
+                </button>
+            </div>
+            <div id="call-history-list" class="history-list">
+                <div class="empty-history" id="empty-history-message">
+                    No call history yet. Make a call to see it here.
+                </div>
+            </div>
+        </section>
+    </main>
