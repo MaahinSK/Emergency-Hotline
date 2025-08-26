@@ -4,11 +4,11 @@ let coins = 100;
 
 const likeDisplay = document.getElementById("likeCount");
 const coinDisplay = document.getElementById("coinCount");
-const copyDisplay = document.getElementById("copyCount"); // inside header pill
+const copyDisplay = document.getElementById("copyCount"); 
 const historyList = document.getElementById("historyList");
 const clearBtn = document.getElementById("clearHistory");
 
-// Handle Like Button
+// Like Button
 document.querySelectorAll(".likeBtn").forEach(btn => {
   btn.addEventListener("click", () => {
     likeCount++;
@@ -16,7 +16,7 @@ document.querySelectorAll(".likeBtn").forEach(btn => {
   });
 });
 
-// Handle Copy Button (inside cards)
+// Copy Button (
 document.querySelectorAll(".copyBtn").forEach(btn => {
   btn.addEventListener("click", () => {
     const number = btn.dataset.number;
@@ -27,7 +27,7 @@ document.querySelectorAll(".copyBtn").forEach(btn => {
   });
 });
 
-// Handle Call Button
+// Call Button
 document.querySelectorAll(".callBtn").forEach(btn => {
   btn.addEventListener("click", () => {
     if (coins >= 20) {
@@ -38,10 +38,10 @@ document.querySelectorAll(".callBtn").forEach(btn => {
       const number = btn.dataset.number;
       const time = new Date().toLocaleTimeString();
 
-      // Show alert (customize text yourself)
+      // Show alert 
       alert(`Calling ${name} at ${number}`);
 
-      // Save to history
+      //  history
       const li = document.createElement("li");
       li.textContent = `${name} (${number}) - ${time}`;
       historyList.prepend(li);
